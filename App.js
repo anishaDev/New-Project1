@@ -9,6 +9,7 @@ import {
 import Tuner from "./screens/Tuner";
 import Note from "./screens/Note";
 import Meter from "./screens/Meter";
+import GetClosestString from "./screens/TunerFunction";
 
 export default class App extends Component {
 
@@ -47,6 +48,7 @@ export default class App extends Component {
     return (
       <View style={style.body}>
         <StatusBar backgroundColor="#000" translucent />
+        <GetClosestString/>
         <Meter cents={this.state.note.cents} />
         <Note {...this.state.note} />
         <Text style={style.frequency}>
@@ -142,7 +144,22 @@ const style = StyleSheet.create({
 
 
 
+// import { StyleSheet, Text, View } from 'react-native'
+// import React from 'react'
+// import GetClosestString from './screens/TunerFunction'
 
+
+// const App = () => {
+//   return (
+//     <View>
+//   <GetClosestString/>
+//     </View>
+//   )
+// }
+
+// export default App
+
+// const styles = StyleSheet.create({})
 
 
 
